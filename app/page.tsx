@@ -1,103 +1,37 @@
-import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const gridElements = [
+    { title: 'Stopwatch', description: 'Bad Apple stopwatch', link: '/stopwatch' },
+    { title: 'Rock Paper Scissors', description: 'AI rock paper scissors', link: '/rock-paper-scissors' },
+    { title: 'Card 3', description: 'This is the third card', link: '/card-3' },
+    { title: 'Card 4', description: 'This is the fourth card', link: '/card-4' },
+    { title: 'Card 5', description: 'This is the fifth card', link: '/card-5' },
+    { title: 'Card 6', description: 'This is the sixth card', link: '/card-6' },
+    { title: 'Card 7', description: 'This is the seventh card', link: '/card-7' },
+    { title: 'Card 8', description: 'This is the eighth card', link: '/card-8' },
+    { title: 'Card 9', description: 'This is the ninth card', link: '/card-9' },
+    { title: 'Card 10', description: 'This is the tenth card', link: '/card-10' },
+    { title: 'Card 11', description: 'This is the eleventh card', link: '/card-11' },
+    { title: 'Card 12', description: 'This is the twelfth card', link: '/card-12' },
+    { title: 'Card 13', description: 'This is the thirteenth card', link: '/card-13' },
+    { title: 'Card 14', description: 'This is the fourteenth card', link: '/card-14' },
+    { title: 'Card 15', description: 'This is the fifteenth card', link: '/card-15' },
+    { title: 'Card 16', description: 'This is the sixteenth card', link: '/card-16' },
+  ]
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  return (
+    <div className="p-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:max-w-6xl mx-auto">
+        {gridElements.map((card, index) => (
+          <Link key={index} href={card.link} className="block">
+            <div className="bg-primary text-white p-4 rounded-lg shadow-md hover:scale-103 transition-transform">
+              <h2 className="text-lg font-bold">{card.title}</h2>
+              <p>{card.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
-  );
+  )
 }
