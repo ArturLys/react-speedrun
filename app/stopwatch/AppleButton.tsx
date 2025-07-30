@@ -32,7 +32,7 @@ export default function BadAppleButton() {
   return (
     <div className="flex">
       {!playing && (
-        <Button onClick={() => setPlaying(true)} className="bg-primary p-2 rounded-lg z-10">
+        <Button onClick={() => setPlaying(true)} className="btn p-2">
           top secret button DO NOT PRESS
         </Button>
       )}

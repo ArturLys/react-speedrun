@@ -8,6 +8,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AppleButton from './stopwatch/AppleButton'
+import ResetRPCDataButton from './rock-paper-scissors/RestartData'
 
 export default function Navbar() {
   const { theme, setTheme, resolvedTheme } = useTheme()
@@ -27,17 +28,18 @@ export default function Navbar() {
     <nav className="flex items-center justify-between p-3 border-b border-white-t/20">
       <div className="flex gap-4">
         <div className="flex items-center space-x-4">
-          <Link href="/" className="text-white-t/80 hover:text-white-t">
+          <Link href="/" className="text-white-t/80 hover:text-white-t p-1">
             Home
           </Link>
         </div>
         {pathname === '/stopwatch' && <AppleButton />}
+        {pathname === '/rock-paper-scissors' && <ResetRPCDataButton />}
       </div>
       <Switch
         checked={enabled}
         onChange={toggle}
         className={clsx(
-          'relative flex h-8 w-16 items-center rounded-full transition-colors p-1',
+          'relative flex h-8 w-16 items-center rounded-full transition-colors p-1 hover:cursor-pointer',
           enabled ? 'bg-white-t/20' : 'bg-white-t/20'
         )}
       >

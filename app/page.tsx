@@ -3,8 +3,8 @@ import Link from 'next/link'
 export default function Home() {
   const gridElements = [
     { title: 'Stopwatch', description: 'Bad Apple stopwatch', link: '/stopwatch' },
-    { title: 'Rock Paper Scissors', description: 'AI rock paper scissors', link: '/rock-paper-scissors' },
-    { title: 'Card 3', description: 'This is the third card', link: '/card-3' },
+    { title: 'Rock Paper Scissors', description: "Bet you can't win 3 in a row", link: '/rock-paper-scissors' },
+    { title: 'Dice', description: 'This is the third card', link: '/dice' },
     { title: 'Card 4', description: 'This is the fourth card', link: '/card-4' },
     { title: 'Card 5', description: 'This is the fifth card', link: '/card-5' },
     { title: 'Card 6', description: 'This is the sixth card', link: '/card-6' },

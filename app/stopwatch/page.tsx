@@ -24,7 +24,7 @@ export default function Stopwatch() {
         <div className="text-2xl font-semibold">{(elapsed / 1000).toFixed(3)}</div>
         <div className="flex gap-4">
           <Button
-            className="hover:cursor-pointer bg-primary p-3 rounded-xl font-semibold"
+            className="btn"
             onClick={() => {
               setTimerState(timerState === 'running' ? 'paused' : 'running')
             }}
@@ -32,12 +32,12 @@ export default function Stopwatch() {
             {timerState === 'running' ? 'Stop' : 'Start'}
           </Button>
           {timerState === 'stopped' ? (
-            <Button className="hover:none bg-secondary p-3 rounded-xl font-semibold" disabled>
+            <Button className="hover:cursor-default bg-secondary p-3 rounded-xl font-semibold" disabled>
               Reset
             </Button>
           ) : (
             <Button
-              className="hover:cursor-pointer bg-primary p-3 rounded-xl font-semibold"
+              className="btn"
               onClick={() => {
                 if (timerState === 'paused') {
                   setLaps([])

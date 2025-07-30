@@ -26,6 +26,10 @@
     background-color: var(--bg);
     color: var(--text);
   }
+
+  .btn {
+    @apply cursor-pointer bg-primary text-white p-3 rounded-xl font-semibold hover:bg-primary/95 transition-colors duration-100;
+  }
 }
 
 @layer utilities {
