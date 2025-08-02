@@ -6,7 +6,7 @@ export default function Home() {
     { title: 'Rock Paper Scissors', description: "Bet you can't win 3 in a row", link: '/rock-paper-scissors' },
     { title: 'Dice', description: 'Dice rolling simulator', link: '/dice' },
     { title: 'Traffic Light', description: 'Traffic light simulator', link: '/traffic-light' },
-    { title: 'Card 5', description: 'This is the fifth card', link: '/card-5' },
+    { title: 'Quote Generator', description: 'Quotes from smart people', link: '/quote-generator' },
     { title: 'Card 6', description: 'This is the sixth card', link: '/card-6' },
     { title: 'Card 7', description: 'This is the seventh card', link: '/card-7' },
     { title: 'Card 8', description: 'This is the eighth card', link: '/card-8' },
