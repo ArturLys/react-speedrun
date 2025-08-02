@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --white: #f4f2f7;
@@ -12,6 +14,10 @@
     --primary: #7964af;
     --secondary: #ae9ed6;
     --accent: #8f74d2;
+    --border-primary: #d1d5db;
+    --border-secondary: #e5e7eb;
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --selected-tab-border: #7964af;
   }
 
   :root[data-theme="dark"] {
@@ -20,17 +26,24 @@
     --primary: #65509b;
     --secondary: #392961;
     --accent: #482d8b;
-  }
-
-  body {
-    background-color: var(--bg);
-    color: var(--text);
-  }
-
-  .btn {
-    @apply cursor-pointer bg-primary text-white p-3 rounded-xl font-semibold hover:bg-primary/95 transition-colors duration-100;
+    --bg-secondary: #1f2937;
+    --border-primary: #4b5563;
+    --border-secondary: #374151;
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --selected-tab-border: #7964af;
   }
 }
+
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.btn {
+  @apply cursor-pointer bg-primary text-white p-3 rounded-xl font-semibold hover:bg-primary/95 transition-colors duration-100;
+}
+
 
 @layer utilities {
   .bg-primary {

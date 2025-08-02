@@ -150,7 +150,10 @@ export default function DicePage() {
         <div className="mt-[30vh]" />
       </div>
       <div className="gap-4 flex leading-none items-center">
-        <button className="btn w-8 h-8 p-1" onClick={() => removeDice(diceValues.length - 1)}>
+        <button
+          className="btn w-8 h-8 p-1 flex items-center justify-center"
+          onClick={() => removeDice(diceValues.length - 1)}
+        >
           -
         </button>
         <input
@@ -161,7 +164,7 @@ export default function DicePage() {
           className="outline-none w-7 text-center font-semibold"
           onChange={(e) => setDiceCount(Number(e.target.value))}
         />
-        <button className="btn w-8 h-8 p-1" onClick={addDice}>
+        <button className="btn w-8 h-8 p-1 flex items-center justify-center" onClick={addDice}>
           +
         </button>
       </div>

@@ -4,7 +4,7 @@ import { createContext, useState, useContext, Dispatch, SetStateAction } from 'r
 
 interface IGlobalState {
   hasSecretOption: boolean
-  // theme: 'dark' | 'light';
+  theme: 'dark' | 'light'
 }
 
 interface IGlobalContext {
@@ -14,6 +14,7 @@ interface IGlobalContext {
 
 const initialState: IGlobalState = {
   hasSecretOption: false,
+  theme: 'light',
 }
 
 const GlobalContext = createContext<IGlobalContext | null>(null)

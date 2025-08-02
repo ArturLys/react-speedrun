@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AppleButton from './stopwatch/AppleButton'
 import ResetRPCDataButton from './rock-paper-scissors/RestartData'
-import AddSecretQuoteButton from './quote-generator/AddSecretQuoteButton'
+import AddSecretQuoteButton from './quote/AddSecretQuoteButton'
 
 export default function Navbar() {
   const { theme, setTheme, resolvedTheme } = useTheme()
@@ -35,7 +35,7 @@ export default function Navbar() {
         </div>
         {pathname === '/stopwatch' && <AppleButton />}
         {pathname === '/rock-paper-scissors' && <ResetRPCDataButton />}
-        {pathname === '/quote-generator' && <AddSecretQuoteButton />}
+        {pathname === '/quote' && <AddSecretQuoteButton />}
       </div>
       <Switch
         checked={enabled}
