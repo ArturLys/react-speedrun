@@ -136,7 +136,7 @@ export default function DicePage() {
   const { label, probability } = getProbabilityData(total, diceValues.length)
 
   return (
-    <div className="flex justify-center items-center flex-col gap-4">
+    <div className="flex justify-center items-center flex-col gap-4 pb-16">
       <div className="relative w-full">
         <div className="sticky top-4 z-10 text-center mt-4">
           <div>
@@ -147,7 +147,7 @@ export default function DicePage() {
             {probability}
           </div>
         </div>
-        <div className="mt-[30vh]" />
+        <div className="mt-[20vh]" />
       </div>
       <div className="gap-4 flex leading-none items-center">
         <button

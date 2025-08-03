@@ -19,8 +19,8 @@ export default function Stopwatch() {
   }, [timerState])
 
   return (
-    <div className="flex items-center justify-center flex-col">
-      <div className="w-64 h-64 border-2 border-white-t/20 rounded-full flex flex-col gap-4 items-center justify-center mt-[30vh]">
+    <div className="flex items-center justify-center flex-col pb-16">
+      <div className="w-64 h-64 border-2 border-white-t/20 rounded-full flex flex-col gap-4 items-center justify-center mt-[20vh]">
         <div className="text-2xl font-semibold">{(elapsed / 1000).toFixed(3)}</div>
         <div className="flex gap-4">
           <Button

@@ -180,7 +180,7 @@ export default function RPC() {
   }
 
   return (
-    <div className="flex items-center justify-center flex-col gap-4 pt-[30vh]">
+    <div className="flex items-center justify-center flex-col gap-4 pt-[30vh] pb-16">
       {gameState === 'aiChoosing' && <div className="text-2xl font-semibold">{aiThinkingMessage}</div>}
       {['win', 'lose', 'draw'].includes(gameState) &&
         (() => {

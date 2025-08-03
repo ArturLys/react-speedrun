@@ -87,7 +87,7 @@ export default function GradientPage() {
 }`
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 pt-[10vh]">
+    <div className="flex flex-col items-center justify-center gap-4 pt-[10vh] pb-16">
       {/* --- COLOR STOPS --- */}
       <div className="flex max-w-md flex-wrap items-center justify-center gap-2">
         {colors.map((color, index) => (
@@ -318,7 +318,6 @@ export default function GradientPage() {
           </TabPanels>
         </TabGroup>
       </div>
-      <br />
     </div>
   )
 }
