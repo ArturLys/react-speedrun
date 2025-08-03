@@ -1,5 +1,219 @@
 import { Quote } from './page'
 
+export const randomQuotes: Quote[] = [
+  {
+    quote: 'To profit from good advice requires more wisdom than to give it.',
+    author: 'Wilson Mizner',
+  },
+  {
+    quote: 'May all beings have happy minds.',
+    author: 'The Buddha',
+  },
+  {
+    quote:
+      'To make no mistakes is not in the power of man; but from their errors and mistakes the wise and good learn wisdom for the future.',
+    author: 'Plutarch',
+  },
+  {
+    quote: 'The greatest good you can do for another is not just share your riches but reveal to them their own.',
+    author: 'Benjamin Disraeli',
+  },
+  {
+    quote: 'Do not follow where the path may lead. Go, instead, where there is no path and leave a trail.',
+    author: 'Ralph Waldo Emerson',
+  },
+  {
+    quote: 'The personal life deeply lived always expands into truths beyond itself.',
+    author: 'Anaïs Nin',
+  },
+  {
+    quote:
+      'We must reach out our hand in friendship and dignity both to those who would befriend us and those who would be our enemy.',
+    author: 'Arthur Ashe',
+  },
+  {
+    quote: 'The art of storytelling is reaching its end because the epic side of truth, wisdom, is dying out.',
+    author: 'Walter Benjamin',
+  },
+  {
+    quote: 'The greatest way to live with honor in this world is to be what we pretend to be.',
+    author: 'Socrates',
+  },
+  {
+    quote: 'Fortune favors the brave.',
+    author: 'Virgil',
+  },
+  {
+    quote:
+      'Cherish your visions and your dreams as they are the children of your soul; the blueprints of your ultimate achievements.',
+    author: 'Napoleon Hill',
+  },
+  {
+    quote: 'If a man watches three football games in a row, he should be declared legally dead.',
+    author: 'Erma Bombeck',
+  },
+  {
+    quote: 'Those who dream by day are cognizant of many things which escape those who dream only by night.',
+    author: 'Edgar Allan Poe',
+  },
+  {
+    quote:
+      'My motto was always to keep swinging. Whether I was in a slump or feeling badly or having trouble off the field, the only thing to do was keep swinging.',
+    author: 'Hank Aaron',
+  },
+  {
+    quote: 'Unless one is able to live fully in the present, the future is a hoax.',
+    author: 'Alan Watts',
+  },
+  {
+    quote: 'Never do things others can do and will do, if there are things others cannot do or will not do.',
+    author: 'Amelia Earhart',
+  },
+  {
+    quote: 'The most technologically efficient machine that man has ever invented is the book.',
+    author: 'Northrop Frye',
+  },
+  {
+    quote: 'They must often change, who would be constant in happiness or wisdom.',
+    author: 'Confucius',
+  },
+  {
+    quote:
+      'A lot of people give up just before theyre about to make it. You know you never know when that next obstacle is going to be the last one.',
+    author: 'Chuck Norris',
+  },
+  {
+    quote: "Argue for your limitations, and sure enough they're yours.",
+    author: 'Richard Bach',
+  },
+  {
+    quote: 'Meaning is not what you start with but what you end up with.',
+    author: 'Peter Elbow',
+  },
+  {
+    quote: 'God always takes the simplest way.',
+    author: 'Albert Einstein',
+  },
+  {
+    quote:
+      'The purpose of learning is growth, and our minds, unlike our bodies, can continue growing as we continue to live.',
+    author: 'Mortimer J. Adler',
+  },
+  {
+    quote: 'Sometimes the most important thing in a whole day is the rest we take between two deep breaths.',
+    author: 'Etty Hillesum',
+  },
+  {
+    quote: "Life's most persistent and urgent question is, 'What are you doing for others?'",
+    author: 'Martin Luther King Jr.',
+  },
+  {
+    quote: 'The most successful people are those who are good at plan B.',
+    author: 'James A. Yorke',
+  },
+  {
+    quote: 'Wisdom cannot come by railroad or automobile or airplane or be hurried up by telegraph or telephone.',
+    author: 'John Burroughs',
+  },
+  {
+    quote: 'Try not to become a man of success, but rather try to become a man of value.',
+    author: 'Albert Einstein',
+  },
+  {
+    quote: 'Before you put on a frown, make absolutely sure there are no smiles available.',
+    author: 'James M. Beggs',
+  },
+  {
+    quote:
+      'It is important to our friends to believe that we are unreservedly frank with them, and important to friendship that we are not.',
+    author: 'Mignon McLaughlin',
+  },
+  {
+    quote: 'Swim upstream. Go the other way. Ignore the conventional wisdom.',
+    author: 'Sam Walton',
+  },
+  {
+    quote: 'It is the nature of the wise to resist pleasures, but the foolish to be a slave to them.',
+    author: 'Epictetus',
+  },
+  {
+    quote: "If you love someone, set them free. If they come back, they're yours; if they don't, they never were.",
+    author: 'Richard Bach',
+  },
+  {
+    quote:
+      'There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.',
+    author: 'Albert Einstein',
+  },
+  {
+    quote:
+      "Ability is what you're capable of doing. Motivation determines what you do. Attitude determines how well you do it.",
+    author: 'Lou Holtz',
+  },
+  {
+    quote: 'One of the tests of leadership is the ability to recognize a problem before it becomes an emergency.',
+    author: 'Olivier Messiaen',
+  },
+  {
+    quote: 'Sustaining true friendship is a lot more challenging than we give it credit for.',
+    author: 'Mariella Frostrup',
+  },
+  {
+    quote: 'If with a pure mind a person speaks or acts, happiness follows them like a never-departing shadow.',
+    author: 'The Buddha',
+  },
+  {
+    quote: 'Reality leaves a lot to the imagination.',
+    author: 'John Lennon',
+  },
+  {
+    quote: 'Friendship brings in a lot of honesty and trust into any relationship, especially a marriage.',
+    author: 'Farhan Akhtar',
+  },
+  {
+    quote: 'Only do what your heart tells you.',
+    author: 'Princess Diana',
+  },
+  {
+    quote: 'Formula for success: under promise and over deliver.',
+    author: 'Tom Peters',
+  },
+  {
+    quote: 'Lord, make me an instrument of thy peace. Where there is hatred, let me sow love.',
+    author: 'Francis of Assisi',
+  },
+  {
+    quote: 'Life is what happens while you are making other plans.',
+    author: 'John Lennon',
+  },
+  {
+    quote: 'One that desires to excel should endeavor in those things that are in themselves most excellent.',
+    author: 'Epictetus',
+  },
+  {
+    quote: 'We are stuck with technology when what we really want is just stuff that works.',
+    author: 'Douglas Adams',
+  },
+  {
+    quote: 'We must embrace pain and burn it as fuel for our journey.',
+    author: 'Kenji Miyazawa',
+  },
+  {
+    quote:
+      'Let the future tell the truth and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine.',
+    author: 'Nikola Tesla',
+  },
+  {
+    quote:
+      'Learning is the beginning of wealth. Learning is the beginning of health. Learning is the beginning of spirituality. Searching and learning is where the miracle process all begins.',
+    author: 'Jim Rohn',
+  },
+  {
+    quote: 'I am not bothered by the fact that I am unknown. I am bothered when I do not know others.',
+    author: 'Confucius',
+  },
+]
+
 export const secretQuotes: Quote[] = [
   {
     quote: 'I never said most of the things I said.',

@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import QuoteDropdown from './QuoteDropdown'
-import { sunTzuQuotes, secretQuotes } from './quotes'
+import { sunTzuQuotes, secretQuotes, randomQuotes } from './quotes'
 import { useGlobalState } from '../contexts/GlobalContext'
 
 export type Quote = {
@@ -23,10 +23,12 @@ export default function QuotesPage() {
       try {
         const response = await fetch('https://api.quotable.io/quotes/random?limit=50')
         const randomData = await response.json()
-        const randomQuotes = randomData.map((q: any) => ({ quote: q.content, author: q.author }))
+        const randomQuotesList = randomData.map((q: any) => ({ quote: q.content, author: q.author }))
 
-        setAllQuotes([...sunTzuQuotes, ...randomQuotes])
+        setAllQuotes([...sunTzuQuotes, ...randomQuotesList])
       } catch (error) {
+        const randomQuotesList = randomQuotes
+        setAllQuotes([...sunTzuQuotes, ...randomQuotesList])
         setError("Couldn't fetch quotes")
       } finally {
         setIsLoading(false)
@@ -68,8 +70,7 @@ export default function QuotesPage() {
       case 'sun tzu':
         return 'https://suntzu.noahvdaa.me/images/sun-tzu-statue.jpg'
       case 'secret':
-        if (currentQuote?.author.toLowerCase().match('tzu'))
-          return '/SunTzuMeme.png'
+        if (currentQuote?.author.toLowerCase().match('tzu')) return '/SunTzuMeme.png'
         else return 'https://content.imageresizer.com/images/memes/Sitting-Wolf-meme-6z9kbk.jpg'
       case 'random':
       default:
