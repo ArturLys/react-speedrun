@@ -32,7 +32,7 @@ const numberInputClass = `
 
 // --- MAIN COMPONENT ---
 export default function GradientPage() {
-  const [colors, setColors] = useState<string[]>(['#65509b', '#f2af33'])
+  const [colors, setColors] = useState<string[]>(['#6a33ca', '#f2af33'])
   const [activeColorIndex, setActiveColorIndex] = useState<number>(0)
   const [value, setValue] = useState(90)
   const [type, setType] = useState<'linear' | 'radial'>('linear')
@@ -103,7 +103,7 @@ export default function GradientPage() {
                   setColors(colors.filter((_, i) => i !== index))
                   if (index === activeColorIndex) setActiveColorIndex(0)
                 }}
-                className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-white opacity-0 transition-opacity group-hover:opacity-100"
+                className="cursor-pointer absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-white opacity-0 transition-opacity group-hover:opacity-100"
               >
                 <XMarkIcon className="h-3 w-3" />
               </button>
@@ -116,7 +116,7 @@ export default function GradientPage() {
               setColors([...colors, '#ffffff'])
               setActiveColorIndex(colors.length)
             }}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border-primary)]"
+            className="cursor-pointer flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border-primary)]"
           >
             <PlusIcon className="h-5 w-5 text-[var(--text-secondary)]" />
           </button>
@@ -202,11 +202,11 @@ export default function GradientPage() {
           value={value}
           type="number"
           disabled={type === 'radial'}
-          onChange={(e) => setValue(Number(e.target.value))}
+          onChange={(e) => setValue(Math.max(0, Math.min(Number(e.target.value), 360)))}
           className={clsx(
             'w-14 rounded-md border bg-transparent py-1 text-center font-semibold',
             type === 'radial'
-              ? 'border-[var(--border-secondary)] text-[var(--text-tertiary)]'
+              ? 'border-[var(--border-secondary)] text-[var(--border-secondary)]'
               : 'border-[var(--border-primary)] text-[var(--text-primary)]',
             numberInputClass
           )}
@@ -221,7 +221,8 @@ export default function GradientPage() {
             onClick={() => setType(gradType)}
             className={clsx('rounded-md px-4 py-1 text-sm capitalize', {
               'bg-[var(--hover-bg)] text-[var(--text-primary)]': type === gradType,
-              'bg-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]': type !== gradType,
+              'cursor-pointer bg-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]':
+                type !== gradType,
             })}
           >
             {gradType}
@@ -253,10 +254,10 @@ export default function GradientPage() {
         {/* --- NESTED TABS FOR CODE --- */}
         <TabGroup>
           <TabList className="flex gap-2 rounded-lg border border-[var(--border-primary)] p-1">
-            <Tab className="flex-1 rounded-md py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:bg-[var(--hover-bg)] data-[selected]:text-[var(--text-primary)] data-[hover]:text-[var(--text-primary)]">
+            <Tab className="cursor-pointer data-[selected]:cursor-default flex-1 rounded-md py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:bg-[var(--hover-bg)] data-[selected]:text-[var(--text-primary)] data-[hover]:text-[var(--text-primary)]">
               Background
             </Tab>
-            <Tab className="flex-1 rounded-md py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:bg-[var(--hover-bg)] data-[selected]:text-[var(--text-primary)] data-[hover]:text-[var(--text-primary)]">
+            <Tab className="cursor-pointer data-[selected]:cursor-default flex-1 rounded-md py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:bg-[var(--hover-bg)] data-[selected]:text-[var(--text-primary)] data-[hover]:text-[var(--text-primary)]">
               Text
             </Tab>
           </TabList>
@@ -268,10 +269,10 @@ export default function GradientPage() {
               <TabPanel key={panel.type}>
                 <TabGroup>
                   <TabList className="mb-2 flex gap-4 border-b border-[var(--border-secondary)]">
-                    <Tab className="border-b-2 border-transparent px-2 py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:border-[var(--selected-tab-border)] data-[selected]:text-[var(--text-primary)]">
+                    <Tab className="cursor-pointer data-[selected]:cursor-default border-b-2 border-transparent px-2 py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:border-[var(--selected-tab-border)] data-[selected]:text-[var(--text-primary)]">
                       React
                     </Tab>
-                    <Tab className="border-b-2 border-transparent px-2 py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:border-[var(--selected-tab-border)] data-[selected]:text-[var(--text-primary)]">
+                    <Tab className="cursor-pointer data-[selected]:cursor-default border-b-2 border-transparent px-2 py-1 text-sm text-[var(--text-secondary)] focus:outline-none data-[selected]:border-[var(--selected-tab-border)] data-[selected]:text-[var(--text-primary)]">
                       CSS
                     </Tab>
                   </TabList>
@@ -280,7 +281,7 @@ export default function GradientPage() {
                       <div className="relative">
                         <button
                           onClick={() => copyToClipboard(panel.reactCode, panelIdx * 2)}
-                          className="absolute right-2 top-2 rounded-lg p-2 hover:bg-[var(--hover-bg)]"
+                          className="cursor-pointer absolute right-2 top-2 rounded-lg p-2 hover:bg-[var(--hover-bg)]"
                         >
                           {copiedIndex === panelIdx * 2 ? (
                             <CheckIcon className="h-5 w-5 text-green-500" />
