@@ -8,7 +8,7 @@ export default function Home() {
     { title: 'Traffic Light', description: 'Traffic light simulator', link: '/traffic-light' },
     { title: 'Quote Generator', description: 'Quotes from smart people', link: '/quote' },
     { title: 'Gradient Generator', description: 'Make gradient text or background', link: '/gradient' },
-    { title: 'Card 7', description: 'This is the seventh card', link: '/card-7' },
+    { title: 'Tic Tac Toe', description: 'Classic game', link: '/tic-tac-toe' },
     { title: 'Card 8', description: 'This is the eighth card', link: '/card-8' },
     { title: 'Card 9', description: 'This is the ninth card', link: '/card-9' },
     { title: 'Card 10', description: 'This is the tenth card', link: '/card-10' },
