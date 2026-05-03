@@ -9,10 +9,10 @@ config.autoAddCss = false
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html lang='en' suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <GlobalStateProvider>
-          <NextThemesProvider defaultTheme="system" enableSystem={true}>
+          <NextThemesProvider defaultTheme='system' enableSystem={true}>
             <Navbar />
             {children}
           </NextThemesProvider>

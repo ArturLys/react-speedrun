@@ -8,7 +8,7 @@ export default function Home() {
     { title: 'Traffic Light', description: 'Traffic light simulator', link: '/traffic-light' },
     { title: 'Quote Generator', description: 'Quotes from smart people', link: '/quote' },
     { title: 'Gradient Generator', description: 'Make gradient text or background', link: '/gradient' },
-    { title: 'Tic Tac Toe', description: 'Classic game', link: '/tic-tac-toe' },
+    { title: 'Tic Tac Toe', description: 'Classic game+ (with multiplayer)', link: '/tic-tac-toe' },
     { title: 'Card 8', description: 'This is the eighth card', link: '/card-8' },
     { title: 'Card 9', description: 'This is the ninth card', link: '/card-9' },
     { title: 'Card 10', description: 'This is the tenth card', link: '/card-10' },
@@ -21,12 +21,12 @@ export default function Home() {
   ]
 
   return (
-    <div className="p-4">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:max-w-6xl mx-auto">
+    <div className='p-4'>
+      <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:max-w-6xl mx-auto'>
         {gridElements.map((card, index) => (
-          <Link key={index} href={card.link} className="block">
-            <div className="bg-primary text-white p-4 rounded-lg shadow-md hover:scale-103 transition-transform">
-              <h2 className="text-lg font-bold">{card.title}</h2>
+          <Link key={index} href={card.link} className='block'>
+            <div className='bg-primary text-white p-4 rounded-lg shadow-md hover:scale-103 transition-transform'>
+              <h2 className='text-lg font-bold'>{card.title}</h2>
               <p>{card.description}</p>
             </div>
           </Link>
