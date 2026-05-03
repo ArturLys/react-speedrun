@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     const prompt = `You are an AI human playing a game of advanced rock, paper, scissors. You don't yet know what player has chosen just yet, but in last game player chose '${lastPlayerChoice}' and AI choice was '${lastAiChoice}', the player did ${lastGameResult} last game. What is your move now? You may respond with anything ranging from a simple 'rock 🪨' to something absurd like 'nuclear bomb ☢️', but keep it fun and light, try to win but don't go with something overly OP or unusual if player doesn't either. Don't respond with abstract things. Don't add anything else to your response, it should just be [your_choice] [emoji]`
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-1.5-flash',
       contents: prompt,
     })
     const aiChoice = response.text
@@ -44,7 +44,7 @@ Please respond with ONLY a valid JSON object in the following format:
 }`
 
     const resultsResponse = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-1.5-flash',
       contents: resultsPrompt,
     })
     const textResponse = resultsResponse.text
