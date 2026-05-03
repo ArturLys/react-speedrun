@@ -2,9 +2,9 @@
 import express from 'express'
 import http from 'http'
 import { Server } from 'socket.io'
-import { generateRoomId } from './utils'
+import { generateRoomId } from './utils.js'
 // Assuming you have this from previous steps for type safety
-import { ClientToServerEvents, ServerToClientEvents } from './shared/socketTypes'
+import { ClientToServerEvents, ServerToClientEvents } from './shared/socketTypes.js'
 
 const app = express()
 const server = http.createServer(app)
