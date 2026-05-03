@@ -4,7 +4,7 @@ import http from 'http'
 import { Server } from 'socket.io'
 import { generateRoomId } from './utils'
 // Assuming you have this from previous steps for type safety
-import { ClientToServerEvents, ServerToClientEvents } from '../../shared/socketTypes'
+import { ClientToServerEvents, ServerToClientEvents } from './shared/socketTypes'
 
 const app = express()
 const server = http.createServer(app)
