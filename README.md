@@ -75,4 +75,4 @@ This project includes a `render.yaml` Blueprint. To deploy:
 
 ---
 
-Built with ❤️ by [Artur](https://github.com/ArturLys)
+Built with ❤️ by [Artur](https://github.com/ArturLys) and read me written by his pretty AI

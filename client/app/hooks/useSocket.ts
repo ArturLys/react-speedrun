@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { io, Socket } from 'socket.io-client'
-import { ClientToServerEvents, ServerToClientEvents } from '../../../shared/socketTypes'
+import { ClientToServerEvents, ServerToClientEvents } from '../shared/socketTypes'
 
 export default function useSocket(): Socket<ServerToClientEvents, ClientToServerEvents> | null {
   const [socket, setSocket] = useState<Socket<ServerToClientEvents, ClientToServerEvents> | null>(null)

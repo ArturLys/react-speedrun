@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react' // Import useCallback
 import { GameState, MetaBoard, Player, Board } from '../lib/types'
 import { createFullInitialBoard, createInitialBoard, calculateWinner } from '../lib/gameLogic'
 import { Socket } from 'socket.io-client'
-import { ClientToServerEvents, ServerToClientEvents, Move } from '../../../../shared/socketTypes'
+import { ClientToServerEvents, ServerToClientEvents, Move } from '../../shared/socketTypes'
 
 export function useOnlineGame(socket: Socket<ServerToClientEvents, ClientToServerEvents> | null, roomId: string | null) {
   const [gameState, setGameState] = useState<GameState>('in-progress')
