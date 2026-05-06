@@ -2,7 +2,7 @@
 
 A high-performance, real-time multiplayer Tic-Tac-Toe game built with **Next.js**, **Express**, and **Socket.io**. Designed for speed, scalability, and a premium user experience.
 
-![Tic-Tac-Toe Demo](https://raw.githubusercontent.com/ArturLys/react-speedrun/master/client/public/screenshots/ttt_1.png)
+![Tic-Tac-Toe Demo](https://raw.githubusercontent.com/ArturLys/react-speedrun/master/client/public/demo.gif)
 
 ## 🚀 Features
 
